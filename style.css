@@ -52,7 +52,7 @@ body {
 }
 
 .container > *{
-    font-size: 5rem;
+    font-size: 2rem;
 }
 
 /* Main Styling */
@@ -61,7 +61,6 @@ body {
 header#header{
     background-color: var(--color-primary);
     grid-column: container-start/container-end;
-    height: 400px;
 }
 
 /* ======================== Booking Content Section ============================= */
@@ -83,4 +82,17 @@ section#villas{
     background-color: var(--color-primary);
     grid-column: container-start / container-end;
     height: 400px;
+}
+
+/* ======================== Booking Date Section ============================= */
+section#motto{
+    background-color: var(--color-secondary);
+    grid-column: container-start / container-end;
+    height: 400px;
+}
+
+/* ======================== Events Content Section ============================= */
+section#events-content{
+    background-color: var(--color-tertiary);
+    grid-column: container-start / col-end 9;
 }
