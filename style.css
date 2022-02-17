@@ -18,8 +18,8 @@
     --color-primary-m-dark: hsla(330, 100%, 23%, 0.85);
 
     --color-secondary: #ffc513;
-    --color-primary-m-light: hsla(45, 100%, 54%, 0.55);
-    --color-primary-m-dark: rgba(255, 196, 19, 0.85);
+    --color-secondary-m-light: hsla(45, 100%, 54%, 0.55);
+    --color-secondary-m-dark: rgba(255, 196, 19, 0.85);
 
     --color-tertiary: #ff724c;
     --color-tertiary-m-light: hsla(13, 100%, 65%, 0.55);
@@ -51,48 +51,178 @@ body {
     grid-template-rows: 100vh repeat(8, min-content);
 }
 
-.container > *{
-    font-size: 2rem;
+/* Anchor tags */
+a:link,
+a:visited {
+    color: var(--color-quaternary);
+    text-decoration: none;
+    font-size: calc(0.5rem + 1vw);
+    padding: 1rem 2rem;
+    border-radius: 0.3rem;
+    position: relative;
+    transition: all var(--transition-duration) cubic-bezier(1, 0, 0, 1);
+    z-index: 1;
+}
+
+/* Paragraphs */
+p {
+    color: white;
+    font-size: calc(1rem + 1vw);
+    font-weight: 300;
+}
+
+/* List Items */
+li {
+    list-style: none;
+    margin-bottom: 4rem;
+}
+
+/* Icons */
+i {
+    font-size: var(--font-size-title);
+    color: (var(--color-secondary));
 }
 
 /* Main Styling */
 
 /* ======================== Header Section ============================= */
-header#header{
-    background-color: var(--color-primary);
+header#header {
+    /* background-color: var(--color-primary); */
     grid-column: container-start/container-end;
+    background: linear-gradient(
+        var(--color-primary-m-light), 
+        var(--color-primary-m-light)
+    ),
+    url("img/hero.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+/* Nav */
+.header__main-nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+.header__main-nav input[type=checkbox] {
+    position: absolute;
+    top: 3rem;
+    left: 3rem;
+    height: 5rem;
+    width: 5rem;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 3;
+}
+
+/* Hamburger */
+.header__main-nav--hamburger{
+    position: absolute;
+    top: 3rem;
+    left: 3rem;
+    height: 5rem;
+    width: 5rem;
+    padding: 1rem;
+    background-color: var(--color-secondary);
+    z-index: 2;
+    display: grid;
+    place-items: center;
+}
+
+/* Hamburger Lines */
+.header__main-nav--hamburger > div {
+    position: relative;
+    height: 0.3rem;
+    width: 100%;
+    background-color: var(--color-quaternary);
+    display: grid;
+    place-items: center;
+    transition: all var(--transition-duration) ease-in-out;
 }
 
 /* ======================== Booking Content Section ============================= */
-section#booking-content{
+section#booking-content {
     background-color: var(--color-secondary);
     grid-column: center-start/col-end 6;
     height: 400px;
 }
 
 /* ======================== Booking Date Section ============================= */
-section#booking-date{
+section#booking-date {
     background-color: var(--color-tertiary);
     grid-column: col-start 7/center-end;
     height: 400px;
 }
 
 /* ======================== Booking Date Section ============================= */
-section#villas{
+section#villas {
     background-color: var(--color-primary);
     grid-column: container-start / container-end;
     height: 400px;
 }
 
 /* ======================== Booking Date Section ============================= */
-section#motto{
+section#motto {
     background-color: var(--color-secondary);
     grid-column: container-start / container-end;
     height: 400px;
 }
 
 /* ======================== Events Content Section ============================= */
-section#events-content{
+section#events-content {
     background-color: var(--color-tertiary);
     grid-column: container-start / col-end 9;
+    height: 400px;
+}
+
+/* ======================== Events Text Section ============================= */
+section#events-text {
+    background-color: var(--color-primary);
+    grid-column: col-start 10 / center-end;
+    height: 400px;
+}
+
+/* ======================== Gallery Text Section ============================= */
+section#gallery-text {
+    background-color: var(--color-secondary);
+    grid-column: center-start / col-end 1;
+    height: 400px;
+}
+
+/* ======================== Gallery Carousel Section ============================= */
+section#gallery-carousel {
+    background-color: var(--color-tertiary);
+    grid-column: col-start 2 / container-end;
+    height: 400px;
+}
+
+/* ======================== Features Content Section ============================= */
+section#features-content {
+    background-color: var(--color-primary);
+    grid-column: container-start / col-end 9;
+    height: 400px;
+}
+
+/* ======================== Features Text Section ============================= */
+section#features-text {
+    background-color: var(--color-secondary);
+    grid-column: col-start 10 / center-end;
+    height: 400px;
+}
+
+/* ======================== Testimonial Section ============================= */
+section#testimonials {
+    background-color: var(--color-tertiary);
+    grid-column: center-start / center-end;
+    height: 400px;
+}
+
+/* ======================== Footer Section ============================= */
+section#footer {
+    background-color: var(--color-primary);
+    grid-column: container-start / container-end;
+    height: 400px;
 }
